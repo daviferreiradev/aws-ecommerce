@@ -40,7 +40,6 @@ export class ProductsAppStack extends cdk.Stack {
         })
         this.productsDdb.grantReadData(this.productsFetchHandler)
 
-
         this.productsAdminHandler = new lambdaNodeJS.NodejsFunction(this,
             "ProductsAdminFunction", {
             functionName: "ProductsAdminFunction",
